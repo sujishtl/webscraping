@@ -94,9 +94,4 @@ function createImage(dataFeed) {
 	fs.writeFileSync(`Pic_${dformat}.png`, buffer);
 }
 
-function sum(a, b) {
-	return a + b;
-  }
-
-module.exports = { getDataInArrayFromWebPage: getDataInArrayFromWebPage, createImage: createImage,isValidUrl:isValidUrl, sum: sum } 
-//module.exports = {  sum: sum } 
+module.exports = { getDataInArrayFromWebPage: getDataInArrayFromWebPage, createImage: createImage,isValidUrl:isValidUrl} 
