@@ -1,0 +1,29 @@
+{
+  "name": "webscraping",
+  "version": "1.0.0",
+  "description": "To get details from a website",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sujishtl/webscraping.git"
+  },
+  "keywords": [
+    "webscraping"
+  ],
+  "author": "Sujish Lakshmanan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sujishtl/webscraping/issues"
+  },
+  "homepage": "https://github.com/sujishtl/webscraping#readme",
+  "dependencies": {
+    "canvas": "^2.6.1",
+    "promise": "^8.1.0"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
