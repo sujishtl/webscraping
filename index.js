@@ -13,7 +13,9 @@ var d = new Date,
 		[d.getHours(),
 		d.getMinutes(),
 		d.getSeconds()].join('_');
+
 main();
+
 
 async function main() {
 	let url = process.argv[2];
@@ -28,10 +30,13 @@ async function main() {
 		console.log('Please provide a valid url');
 	}
 }
+
 function isValidUrl(url) {
 	var expression = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
+	var localhostExpression=/^http:\/\/\w+(\.\w+)*(:[0-9]+)?\/?(\/[.\w]*)*$/;
 	var regex = new RegExp(expression);
-	if (typeof url !== 'undefined' && url.match(regex)) {
+	var localhostRegex= new RegExp(localhostExpression);
+	if (typeof url !== 'undefined' && (url.match(regex)|| url.match(localhostRegex))) {
 		console.log("Successfully matched URL Pattern");
 		return true;
 	} else {
